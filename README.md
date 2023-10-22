@@ -1,5 +1,5 @@
 # Create sales invoice using Rest API
-    POST /api/method/systemaerp.accounts.utils.create_invoice
+    POST /api/method/systemaerp.accounts.utils.create_bio_invoice
   ## Headers
   |Header                |Format                          |Example                         |
 |----------------|-------------------------------|-----------------------------|
@@ -13,6 +13,11 @@
 |`customer`| Required: Customer Details (object)           |[Customer Details](#customer-details)           |
 |`items`| Required: Invoice Items (array)            |[Item Details](#item-details)         |
 |`tax`| Required: Item tax percent  (string)           |15%           |
+|`mop`| Required: Mode Of Payment  (string)           |Cash           |
+|`return`| Required: Check if invoice is return  (bool)           |false           |
+|`paid_amount`| Required: Customer Paid Amount  (float)           |1000.00          |
+|`return_amount`| Required: Customer Return Amount  (float)  If `return` is false set value to 0.00         |1000.00          |
+
 
   ## Customer Details
   |Field                |Description                          |Example                         |
